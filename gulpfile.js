@@ -1,4 +1,4 @@
-var path = "..";
+var path = ".";
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
@@ -11,13 +11,16 @@ var notify = require("gulp-notify");
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "..",
-        notify: false
+        server: ".",
+        notify: true
     });
 
-    gulp.watch(path + "/assets/scss/*.scss", ['sass']);
+    gulp.watch(path + "/assets/scss/**/*.scss", ['sass']);
     gulp.watch(path + "/assets/js/vendors/*.js", ['concat']);
-    gulp.watch(path + "/*.html").on('change', browserSync.reload);
+    gulp.watch(path + "/index.html").on('change', function(){
+        console.log("Reloading");
+        browserSync.reload();
+    });
 });
 
 gulp.task('sass', function() {
