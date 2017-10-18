@@ -1,4 +1,5 @@
 /** Nơi viết/include các css riêng **/
+/*icon*/
 .fa {
  display: inline-block;
   font-family: FontAwesome;
@@ -22,6 +23,117 @@ nav a {
 .fa-envelope-o, .fa-bell-o {
 	color: white;
 }
-input { 
-	display: none ;
-} 
+
+/*nav-inline*/
+.nav-inline{
+  float: right;
+  width: 25.9375rem;
+  height: 3.125rem;
+  .nav-link img{
+	  width: 2.5rem;
+	  height: 2.5rem;
+	}
+}
+
+/*ping*/
+.ping{
+  background-color: red;
+  border: 3px solid red;
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
+  right: 24em;
+  top: 13px;
+  position: absolute;
+  z-index: 1;
+}
+
+/*search input*/
+#search-inp {
+	opacity: 0;
+  width: 0;
+}
+
+/*container*/
+.part1{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: LightGray;
+}
+
+.part2{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.head-part2{
+  margin-bottom: 20px;
+}
+
+/*carousel*/
+.carousel-indicators li{
+	border: 1px solid black;
+	.active{
+		background-color: black;	
+	}
+}
+
+/*nav-bar part1*/
+.navbar-nav{
+	 .active{
+	  border-bottom: 2px solid red;
+	}
+	&li:hover{
+	  border-bottom: 2px solid red;
+	}
+}
+
+/*nav-tab part2*/
+.nav-tabs{
+	li a{
+	  color:gray;
+	}
+	&.active a{
+	  color: black;
+	}
+	&li:hover{
+	  border-bottom: 2px solid red;
+	}
+	&li:hover a{
+	  color: black;
+	}
+}
+
+/*media*/
+.media {
+  margin-top:1rem;
+   img {
+	  width:7.5rem;
+	  height:6.25rem;
+	}
+	&.media-left{
+	  margin-right: 1rem;
+	}
+}
+.video {
+  margin-top:2rem; 
+}
+.embed-responsive {
+  margin-top:1.25rem;
+}
+
+.heading-large{
+  border-bottom: 2px solid black;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.125rem;
+}
+.footer{
+  background-color: black;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.action-box{
+  width: 100%;
+}
