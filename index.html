@@ -107,7 +107,7 @@
 
                 <form class="ml-auto">
                   <div class="search">
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="search-inp">
+                    <input class="form-control" type="text" placeholder="Search" maxlength="64" aria-label="Search" id="search-inp">
                     <button class="btn btn-search" type="submit" id="search-btn">
                          <i class="fa fa-search"></i>
                     </button>
@@ -620,22 +620,3 @@
 
     </body>
 </html>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-
-    $("#search-btn").mouseenter(function(){
-        $("#search-inp").animate({  
-            opacity: '1',
-            width: '12.375rem'
-        }, 1000);
-    });
-
-    $("#search-btn").mouseleave(function(){
-        $("#search-inp").animate({  
-            opacity: '0',
-            width: '0rem'
-        }, 1000);
-    });
-  });
-</script>
