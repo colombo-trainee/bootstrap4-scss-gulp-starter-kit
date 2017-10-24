@@ -26,7 +26,7 @@
                   <a target="_blank" href = "#" class = "fa fa-google-plus"></a>
                   <a target="_blank" href = "#" class = "fa fa-linkedin"></a>
                   <a target="_blank" href = "#" class = "fa fa-youtube"></a>
-                  <a target="_blank" href = "#" class = "fa fa-vimeo-square"></a>
+                  <a target="_blank" href = "#" class = "fa fa-vimeo-square last"></a>
                 </div>
               </div>
             </div>
@@ -37,13 +37,13 @@
         <div class="top-head left">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 col-lg-4">
+              <div class="col-6 col-md-6 col-lg-4">
                 <h1>Grafreez News
                   <small>Get the latest News</small>
                 </h1>
               </div>
 
-              <div class="col-md-6 col-lg-3 ml-auto admin-bar hidden-sm-down">
+              <div class="col-6 col-md-6 col-lg-3 ml-auto admin-bar hidden-sm-down">
                 <nav class="nav nav-inline">
                   <a href="" class="nav-link">
                     <span class="ping"></span>
@@ -65,13 +65,13 @@
         </div>
 
         <section class="top-nav">
-          <nav class="navbar navbar-expand-lg py-0">
+          <nav class="navbar navbar-expand-lg  py-0">
             <div class="container">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
               </button>
 
-              <div class="collapse navbar-collapse" id="exCollapsingNavbar2">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
@@ -393,16 +393,16 @@
 
               <aside class="col-lg-4 col-md-12">
                 <ul class="nav nav-tabs" role="tablist" id="myTab">
-                  <li class="nav-item active">
-                    <a class="nav-link active" data-toggle="tab" href="#latest">LATEST</a>
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#latest" role="tab" aria-expanded="true">LATEST</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#top">TOP</a>
+                    <a class="nav-link" data-toggle="tab" href="#top" role="tab" aria-expanded="false">TOP</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#featured">FEATURED</a>
+                    <a class="nav-link" data-toggle="tab" href="#featured" role="tab" aria-expanded="false">FEATURED</a>
                   </li>
                 </ul>
 
@@ -620,3 +620,25 @@
 
     </body>
 </html>
+
+<script type="text/javascript">
+  
+    // if ($(window).width() < 960) {
+    //    alert('Less than 960');
+    // }
+    // else {
+    //    alert('More than 960');
+    // }
+    window.onresize = dosth;
+
+    function dosth() {
+      if(window.innerWidth<992){
+        $('.top-nav .btn').attr('class', 'btn btn-search small');
+        $('.top-nav .form-control').attr('class', 'form-control small');
+      }
+      else{
+        $('.top-nav .btn').attr('class', 'btn btn-search');
+        $('.top-nav .form-control').attr('class', 'form-control');
+      }
+    }
+</script>

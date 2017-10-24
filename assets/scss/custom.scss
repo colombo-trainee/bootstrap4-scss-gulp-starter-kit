@@ -15,9 +15,10 @@ a, a:hover, .btn{
 	border-color: #FD3A13; 
 	color: #fff; 
 	padding: 7px 10px;
-	:hover{
+	&:hover{
 		background: #ca1b1b;
 		border-color: #ca1b1b;
+		cursor: pointer;
 	}
 }
 .card{
@@ -45,7 +46,10 @@ a, a:hover, .btn{
 	    		border-left: 1px solid #2b2b2b;
 			    color: #ca1b1b;
 			    float: left;
-			    padding: 6px 13px; 
+			    padding: 6px 13px;
+			    &.last{
+			    	border-right: 1px solid #2b2b2b;
+			    } 
 			    &:hover{
 			    	color:#FD3A13; 
 			    	text-decoration: none;
@@ -113,6 +117,10 @@ a, a:hover, .btn{
 	background: #fff;
     padding: 0;
     border-bottom: 1px solid #dbdbdb;
+    .navbar-toggler{
+    	color: rgba(0,0,0,.5);
+    	border-color: rgba(0,0,0,.1);
+    }
     .nav-link{
     	padding-bottom: 0.7rem; 
     	padding-top: 0.7rem;
@@ -140,7 +148,12 @@ a, a:hover, .btn{
     	border-color: #fff;
     }
     .btn{
-    	position: absolute;right: 0;top: -3px;border-radius:3px;
+    	position: absolute;
+    	right: 0;top: -3px;
+    	border-radius:3px;
+    	&.small{
+    		right: 210px;
+    	}
     }
 }
 
@@ -219,7 +232,7 @@ a, a:hover, .btn{
 .text-time{color: #ff0000; font-weight: 600;}
 header{float: left; width:100%}
 .top-slider .carousel-indicators{
-	bottom: 0
+	bottom: 0;
 	li{
 		border:1px solid #000;
 	}
@@ -229,8 +242,10 @@ header{float: left; width:100%}
 	border-bottom:none;
 	.nav-link {
 		color: #aeaeae; text-transform: uppercase; border: none;
-		.active, &:hover{
-			border-bottom:2px solid #ff0000;  text-transform: uppercase; color: #222;
+		&.active, &:hover{
+			border-bottom:2px solid #ff0000;  
+			text-transform: uppercase; 
+			color: #222;
 		}
 	}
 }
@@ -241,23 +256,40 @@ header{float: left; width:100%}
 } 
 #search {float: right; margin-top: 9px; width: 250px;}
 .search {
-	padding: 5px 0; width: 230px; height: 30px; position: relative; left: 10px; float: left; line-height: 22px;
+	padding: 5px 0; 
+	width: 230px; 
+	height: 30px; 
+	position: relative; left: 10px; float: left; 
+	line-height: 22px;
 	input {
 		background: #d0d0d0; 
 		border: medium none; 
 		border-radius: 3px 0 0 3px; 
 		float: left; height: 36px; 
 		line-height: 18px; 
-		margin-left: 210px; 
+		margin-left: 210px;
+		margin-right: 0px; 
 		padding: 0 9px; 
 		position: absolute; 
 		top: -3px; 
 		width: 0; 
 		-webkit-transition: all 0.7s ease-in-out; 
 		-moz-transition: all 0.7s ease-in-out;
-        -o-transition: all 0.7s ease-in-out; transition: all 0.7s ease-in-out;}
+        -o-transition: all 0.7s ease-in-out; 
+        transition: all 0.7s ease-in-out;
+        &.small{
+        	margin-right: 185px;
+        	margin-left: 0px;
+        }
+    }
 	&:hover input, input:focus{
-		width: 200px; margin-left: 0px; background: #d0d0d0;
+		width: 200px; margin-left: 0px; 
+		margin-right: 0px;
+		background: #d0d0d0;
+		&.small{
+			margin-left: 15px;
+			margin-right: 0px;
+		}
 	}
 }
 .section-01{

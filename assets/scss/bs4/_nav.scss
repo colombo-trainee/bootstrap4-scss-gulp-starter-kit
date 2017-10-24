@@ -37,7 +37,7 @@
   }
 
   .nav-link {
-    border: $nav-tabs-border-width solid transparent;
+    border: none;
     @include border-top-radius($nav-tabs-border-radius);
 
     @include hover-focus {
